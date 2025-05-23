@@ -77,6 +77,89 @@ the installed program.
 
 ## Level Two: Configuration
 
+### Locate the installed application
+
+First you will need to locate where the application was installed.
+When you add an application to Steam, the files for that application
+are placed in a subdirectory located at:
+
+```
+~/.local/share/Steam/steamapps/compatdata/
+```
+
+However, these subdirectories are named with numerical IDs rather than the
+application name. You will need to identify which subdirectory contains the application
+you just installed. The easiest method will be to use the `find` command
+from the terminal. To do this, first navigate to the parent directory:
+
+```
+cd ~/.local/share/Steam/steamapps/compatdata/
+```
+
+Then use the `find` command with the name of your application:
+
+```
+find . -iname '*notepad++*'
+```
+
+If this does not reveal the location, you will need to manually search for the
+directory. Since we just installed the application,
+you can narrow down your search by checking the creation timestamps
+of the subdirectories by running:
+
+```
+ls -l --time=creation
+```
+
+As an example, my Notepad++ installation was placed in a directory named `3060847736`
+and I found the `.exe` for the application at:
+
+```
+~/.local/share/Steam/steamapps/compatdata/3060847736/pfx/drive_c/Program Files/Notepad++/notepad++.exe
+```
+
+Once you have found the correct location for the `.exe` of the application,
+continue on to the next step.
+
+### Modify the shortcut properties
+
+Close out the application if you have not done so already.
+As before, right-click the entry for your application in the Games list
+on the left side of your Library and select `Properties…`:
+
+`IMAGE`
+
+We will need to point the shortcut to the actual location of the installed
+Windows program.
+
+In the `TARGET` field, enter the full path to the `.exe` enclosed in quotes:
+
+```
+"/home/user/.local/share/Steam/steamapps/compatdata/3060847736/pfx/drive_c/Program Files/Notepad++/notepad++.exe"
+```
+
+In the `START IN` field, enter the directory containing the `.exe` enclosed in quotes:
+
+```
+"/home/user/.local/share/Steam/steamapps/compatdata/3060847736/pfx/drive_c/Program Files/Notepad++"
+```
+
+You can also modify the name of the shortcut at the top to reflect the application name.
+When you are done, your `Shortcut` section should look similar to the following:
+
+`IMAGE`
+
+### Launch the application
+
+Close out the properties window and launch the application.
+If you configured everything correctly, the application should run:
+
+`IMAGE`
+
+And you are done! However, if you are like me and find yourself squinting
+to read the text in the application, you may want to continue on to the
+next step.
+
 ## Level Three: DPI Scaling
 
 ## Level Four: Symlinks
