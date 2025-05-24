@@ -162,7 +162,43 @@ next step.
 
 ## Level Three: DPI Scaling
 
-## Level Four: Symlinks
+First close out the application.
+To change the DPI scaling settings for the application, you will need to
+modify the `user.reg` file for the application. This file can be found at:
+
+```
+~/.local/share/Steam/steamapps/compatdata/3060847736/pfx/user.reg
+```
+
+Open this file in a text editor of your choice. In this file, search for a section
+heading named `[Control Panel\\Desktop]`:
+
+`IMAGE`
+
+Below this heading will be a list of values. To change the DPI scaling for this
+application, you will need to add two values to the end of this section.
+
+`"Win8DpiScaling"=dword:00000001`: To enable DPI scaling.
+
+`LogPixels`: To specify the DPI scaling value. Since this value
+is expressed as a hexadecimal number, refer to the following table to determine
+which value to use based on your desired DPI setting:
+
+| Scaling | DPI | Value |
+| ---- | ----: | ---- |
+| 100% | 96 | `"LogPixels"=dword:00000060` |
+| 125% | 120 | `"LogPixels"=dword:00000078` |
+| 150% | 144 | `"LogPixels"=dword:00000090` |
+| 200% | 192 | `"LogPixels"=dword:000000c0` |
+
+For example, to set DPI scaling to 200% add the following two lines:
+
+`IMAGE`
+
+Save `user.reg` and relaunch the application. The new DPI scaling
+will now be in effect:
+
+`IMAGE`
 
 ## License
 
