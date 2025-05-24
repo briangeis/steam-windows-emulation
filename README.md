@@ -206,3 +206,6 @@ GNU General Public License v3.0
 
 ## References
 
+[GitHub - ValveSoftware/Proton](https://github.com/ValveSoftware/Proton)
+
+[GitHub - ValveSoftware/steam-for-linux](https://github.com/ValveSoftware/steam-for-linux)
