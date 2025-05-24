@@ -33,24 +33,24 @@ Before we begin, you will need to have:
 In the Steam client, select `Games > Add a Non-Steam Game to My Library`
 from the menu:
 
-`IMAGE`
+<p><img src="images/level-1a.png" width=50%></p>
 
 The window `Add Non-Steam Game` will pop up. Select the `Browse…` button:
 
-`IMAGE`
+<p><img src="images/level-1b.png" width=75%></p>
 
 Navigate to the location of your Windows `.exe` installer and select it.
 You can filter the list in the `Add Non-Steam Game` window by entering
 the name of the installer in the text field. Once you have ensured your
 installer is checked, click the `Add Selected Programs` button:
 
-`IMAGE`
+<p><img src="images/level-1c.png" width=75%></p>
 
 This will add the installer to your Games list on the left side of your
 Library. Before you launch the installer, right-click it and select
 `Properties…`:
 
-`IMAGE`
+<p><img src="images/level-1d.png" width=50%></p>
 
 A properties window will pop up.
 Click on the `Compatibility` section on the left side.
@@ -58,18 +58,18 @@ Check the `Force the use of a specific Steam Play compatibility tool` option
 and select from the drop-down the latest stable version of Proton.
 At the time of this writing, this version is `Proton 9.0-4`:
 
-`IMAGE`
+<p><img src="images/level-1e.png" width=100%></p>
 
 When you are done, close the window and launch the program.
 The installer for your selected application should appear:
 
-`IMAGE`
+<p><img src="images/level-1f.png" width=25%></p>
 
 If for some reason the installer does not launch, try a different version of
 Proton. Once the installation process is complete, your should see your
 program successfully launch:
 
-`IMAGE`
+<p><img src="images/level-1g.png" width=75%></p>
 
 Although the program launched, the shortcut still points to the installer.
 Next, we will need to modify the properties so that the shortcut launches
@@ -127,7 +127,7 @@ Close out the application if you have not done so already.
 As before, right-click the entry for your application in the Games list
 on the left side of your Library and select `Properties…`:
 
-`IMAGE`
+<p><img src="images/level-1d.png" width=50%></p>
 
 We will need to point the shortcut to the actual location of the installed
 Windows program.
@@ -147,14 +147,14 @@ In the `START IN` field, enter the directory containing the `.exe` enclosed in q
 You can also modify the name of the shortcut at the top to reflect the application name.
 When you are done, your `Shortcut` section should look similar to the following:
 
-`IMAGE`
+<p><img src="images/level-2a.png" width=100%></p>
 
 ### Launch the application
 
 Close out the properties window and launch the application.
 If you configured everything correctly, the application should run:
 
-`IMAGE`
+<p><img src="images/level-1g.png" width=75%></p>
 
 And you are done! However, if you are like me and find yourself squinting
 to read the text in the application, you may want to continue on to the
@@ -173,7 +173,7 @@ modify the `user.reg` file for the application. This file can be found at:
 Open this file in a text editor of your choice. In this file, search for a section
 heading named `[Control Panel\\Desktop]`:
 
-`IMAGE`
+<p><img src="images/level-3a.png" width=75%></p>
 
 Below this heading will be a list of values. To change the DPI scaling for this
 application, you will need to add two values to the end of this section.
@@ -193,12 +193,12 @@ which value to use based on your desired DPI setting:
 
 For example, to set DPI scaling to 200% add the following two lines:
 
-`IMAGE`
+<p><img src="images/level-3b.png" width=75%></p>
 
 Save `user.reg` and relaunch the application. The new DPI scaling
 will now be in effect:
 
-`IMAGE`
+<p><img src="images/level-3c.png" width=75%></p>
 
 ## License
 
