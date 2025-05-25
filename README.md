@@ -21,7 +21,7 @@ to install and configure Notepad++, a popular Windows text editor.
 
 ## Prerequisites
 
-Before we begin, you will need to have:
+Before we begin, you will need:
 
 * The Steam for Linux client installed
 * The Windows `.exe` installer for your application
@@ -29,7 +29,7 @@ Before we begin, you will need to have:
 In this tutorial, I will be using the Notepad++ installer
 `npp.8.8.1.Installer.x64.exe`.
 
-## Level One: Installation
+## Step One: Installation
 
 ### Installing the Program
 
@@ -68,17 +68,17 @@ The installer for your selected application should appear:
 
 <p><img src="images/level-1f.png" width=25%></p>
 
-If for some reason the installer does not launch, try selecting a different
-version of Proton. Once the installation process is complete, you should see
-your program successfully launch:
+If for some reason the installer does not launch, select a different version
+of Proton and retry. Once the installation process is complete, you should
+see your program successfully launch:
 
 <p><img src="images/level-1g.png" width=75%></p>
 
 Although the program launched, the shortcut is still configured to launch
 the installer. Next, we will need to modify the shortcut properties so that
-it launches the installed program instead of the installer.
+it launches the installed program instead.
 
-## Level Two: Configuration
+## Step Two: Configuration
 
 ### Locate the installed application
 
@@ -139,7 +139,7 @@ Before you enter these properties, note that:
 * You cannot use tilde expansion `~/` to reference your home directory.
 Use the full path instead.
 * Both values need to be enclosed in quotation marks.
-* The below two examples are specific to my installation.
+* The two examples listed below are specific to my installation.
 Use the paths for your installation from the previous step.
 
 In the `TARGET` field, enter the full path to the `.exe`:
@@ -171,7 +171,7 @@ And you are done! However, if you are like me and find yourself squinting
 to read the text in the application, you may want to continue to the
 next step.
 
-## Level Three: DPI Scaling
+## Step Three: DPI Scaling
 
 First, close out the application.
 To change the DPI scaling settings for the application, you will need to
@@ -205,7 +205,7 @@ table to determine which value to use based on your desired DPI setting:
     | 200% | 192 | `"LogPixels"=dword:000000c0` |
 
 For example, to set my DPI scaling to 200% I would add the following two
-lines as highlighted below:
+lines highlighted below:
 
 <p><img src="images/level-3b.png" width=75%></p>
 
