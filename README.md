@@ -2,6 +2,16 @@
 
 Tutorial on how to use Steam for Linux as a Windows emulator.
 
+## Table of Contents
+
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
+* [Step One: Installation](#step-one-installation)
+* [Step Two: Configuration](#step-two-configuration)
+* [Step Three: DPI Scaling](#step-three-dpi-scaling)
+* [License](#license)
+* [References](#references)
+
 ## Overview
 
 Steam is a digital content distribution service developed by Valve.
@@ -30,8 +40,6 @@ In this tutorial, I will be using the Notepad++ installer
 `npp.8.8.1.Installer.x64.exe`.
 
 ## Step One: Installation
-
-### Installing the Program
 
 In the Steam client, select `Games > Add a Non-Steam Game to My Library`
 from the menu:
